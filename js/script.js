@@ -12,22 +12,15 @@ $(function () {
     $('#search-pc').click(function () {
         $('.search-pc').slideToggle();
     });
-    // tab danh mục đầu tư
-    $('.tab-bar .tab-title:first-child').addClass('tab-active');
-        $('.tab-content').hide();
-        $('.tab-content:first').show();
+  
 
 // Click function
-        $('.tab-bar .tab-title').click(function(){
-        $('.tab-bar .tab-title').removeClass('tab-active');
-        $(this).addClass('tab-active');
-        $('.tab-content').hide();
-        
-        var activeTab = $(this).find('a').attr('href');
-        $(activeTab).fadeIn();
-        return false;
+        $('.attractinfo-wrapper .quest').click(function(){
+            $(this).parent().toggleClass('active', 500);
+             
         });
 // end tab danh mục đầu tư
+
 // phân trang
        
 
@@ -119,6 +112,7 @@ $('#pagination-container').quickPagination({
     */
 
 });
+
 $.fn.digits = function () {
     return this.each(function () {
         $(this).text($(this).text().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1."));

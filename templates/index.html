@@ -27,7 +27,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@200;300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/fonts/myriad-pro-cufonfonts-webfont/style.css">
-  <link rel="stylesheet" type="text/css" href="/css/fontawesome-5.12.1/css/all.min.css" />
+  <link rel="stylesheet" type="text/css" href="/css/fontawesome-5.12.1/fontanwesome-pro/css/all.min.css">
   <link rel="stylesheet" type="text/css" href="/css/jquery.mmenu.all.css" />
   <link rel="stylesheet" href="/css/jquery-ui.css" />
   <script src="/js/jquery-1.10.1.min.js"></script>
@@ -47,7 +47,7 @@
             <div class="flex-container align-center">
                 <div class="cell-2-3 tab-cell-1-1">
                     <div class="d-flex align-center">
-                      <img class="logo"  src="/uploaded/logo/logo.png" alt="">
+                      <a href="/templates/index.html">  <img class="logo"  src="/uploaded/logo/logo.png" alt=""></a>
                       <div class="title-image">
                         <img src="/uploaded/files/header-title.png" alt="">
                       </div>
@@ -78,7 +78,7 @@
             <div class="menubar">
               <ul class="nav  hide-on-mobile">
                 <li class="">
-                   <a href="/" class=""><span> Giới thiệu  </span></a>
+                   <a href="/templates/about1.html" class=""><span> Giới thiệu  </span></a>
                 </li>
                 <li class=""> 
                   <a href="#" class=""><span>Tin tức sự kiện </span></a>
@@ -92,7 +92,17 @@
                     </ul>
                 </li>
                 <li class=""> 
-                  <a href="#" class=""><span>Học bổng</span></a>       
+                  <a href="#" class=""><span>Học bổng</span></a>  
+                  <ul class="submnu1">
+                    <li class=""><a href="#">Học bổng thạc sĩ</a>
+                    </li>
+                    <li class=""><a href="#">học bổng tiến sĩ</a>
+                    </li>
+                    <li class=""><a href="#">Học bổng đại học</a>
+                    </li>
+                    <li class=""><a href="#">Học bổng postdoc</a>
+                    </li>
+                </ul>     
                 </li>
                 <li class="">
                    <a href="#" class=""><span>Khóa học </span></a>
@@ -165,9 +175,12 @@
                               <p>
                                 Lorem ipsum is placeholder text commonly used in the graphic, p
                               </p>
-                              <a href="#" class="btn-dangky">
-                                Đăng ký ngay
-                              </a>
+                              <div class="c20"></div>
+                                <div>
+                                  <a href="#" class="btn-dangky">
+                                    Đăng ký ngay
+                                  </a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -207,12 +220,29 @@
             </div>
           <!-- end slideshow -->
           </div> 
+          <script>
+  
+            var swiper = new Swiper("#slide_home", {
+                slidesPerView: 1,
+                spaceBetween: 0,
+                loop: true,
+                grabCursor: true,
+                pagination: {
+                  el: '.slider__pagination',
+                  clickable: true,
+                },
+                autoplay: {
+                  delay: 5000,
+                },
+                 });
+               
+          </script>
         </div>
         <!-- event -->
         <div class="homeevent-wrapper">
             <div class="grid">
               <div class="title-wrapper">
-                    <h2>  Sự kiện sắp dễn ra  </h2>    
+                    <h2>  Sự kiện sắp diễn ra  </h2>    
                   <div class="more-wrapper">
                     <a href="#">Xem thêm sự kiện <i class="fas fa-chevron-circle-right"></i></a>
                 </div>              
@@ -427,9 +457,37 @@
                 <div class="swiper-button-prev"> <i class="fas fa-chevron-left"></i></div>
               </div>
             </div>
-        </div>
+          </div>
+        <script>
+            var swiper = new Swiper('.swiper-book', {
+          pagination: {
+            el: ".swiper-pagination",
+            dynamicBullets: true,
+            clickable: true,
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+          slidesPerView: 5,
+          centeredSlides: true,
+          paginationClickable: true,
+          loop: true,
+          // spaceBetween:30,
+          slideToClickedSlide: true,
+            breakpoints: {
+          500: {
+            slidesPerView: 1.2
+          },
+          700: {
+            slidesPerView: 1
+          }
+          }
+        });
+    
+        </script>
       </div>
-    </div>
+   
     <div class="homeattract-wrapper">
         <div class="grid">
           <div class="title-wrapper">
@@ -611,7 +669,7 @@
 
     </footer>
     <!-- end footer -->
-</div>
+    </div>
 <nav id="menu">
   <ul>
     <li>
@@ -662,48 +720,7 @@
   <link rel="stylesheet" href="/css/jquery.fancybox.css" />
   <script src="/js/jquery.fancybox.js"></script>
   <link rel="stylesheet" href="/css/hover.css" />
-<script>
-  
-  var swiper = new Swiper("#slide_home", {
-      slidesPerView: 1,
-      spaceBetween: 0,
-      grabCursor: true,
-      pagination: {
-        el: '.slider__pagination',
-        clickable: true,
-      },
-      navigation: {
-        nextEl: '.slider__button-next',
-        prevEl: '.slider__button-prev',
-      },
-      });
-      var swiper = new Swiper('.swiper-book', {
-        pagination: {
-          el: ".swiper-pagination",
-          dynamicBullets: true,
-          clickable: true,
-        },
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-        slidesPerView: 5,
-        centeredSlides: true,
-        paginationClickable: true,
-        loop: true,
-        // spaceBetween:30,
-        slideToClickedSlide: true,
-          breakpoints: {
-        500: {
-          slidesPerView: 1.2
-        },
-        700: {
-          slidesPerView: 1
-        }
-        }
-      });
-   
-</script>
+
   
 </body>
 
