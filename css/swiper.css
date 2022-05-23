@@ -194,6 +194,7 @@ filter: drop-shadow(5px 8.66px 10px rgba(0,0,0,0.15));
 background-color: #00803d;
 color: #FFF;
 padding: 7px 10px;
+font-size: 1.8rem;
 }
 
 .swiper-button-prev.swiper-button-disabled,

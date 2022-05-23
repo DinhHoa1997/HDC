@@ -42,7 +42,7 @@
 <body>
 <div id="page">
     <!-- header pc -->
-    <div class="top-header hide-on-mobile">
+    <div class="top-header hide-on-pad  hide-on-mobile">
         <div class="grid">
             <div class="flex-container align-center">
                 <div class="cell-2-3 tab-cell-1-1">
@@ -125,12 +125,29 @@
                   <a href="/lien-he/" class=""><span>Kết nối nghiên cứu</span></a>      
                 </li>
                 <li class="">
-                  <div id="search-pc"><i class="fas fa-search"></i>
-                     
-                  </div>
-                  <form action="#" class="search-pc">
-                    <input type="text" class="">
+                 <div class="icon-search" >
+                <i class="fa fa-search search-icon" aria-hidden="true"></i>
+
+                <div class="search-pc" style="display: none;">
+                  <form action="/search/" method="get" id="searchformtab">
+                    <input name="qr" class="kw" placeholder="Tìm kiếm " type="text">
+                      <a href="#" class="submit-search-pc" onClick="$('#searchformtab').submit();
+                          return false;">  <i class="fa fa-search" aria-hidden="true"></i> </a>
+
+                      <a href="#" class="closeX" onClick="$('.search-pc').hide();
+                          return false;">&#10005;</a>        
                   </form>
+                </div>
+
+            <script type="text/javascript">
+              $(document).ready(function () {
+                $(".search-icon").click(function () {
+                  $(".search-pc").stop().slideToggle("fast");
+                  return false;
+                });
+              });
+            </script>  		
+          </div>
                 </li>
                 <li>
                   <div class="phone-header" >
@@ -143,10 +160,22 @@
             </div>
         </div>
       </div>
+      <style>
+
+      </style>
       <div class="c"></div>
     </header>
     <!-- end header pc -->
     <div class="hide-on-pc">
+        <div class="top-header">
+          <div class="title-image">
+            <img src="/uploaded/files/header-title.png" alt="">
+          </div>
+          <div class="lang">
+            <a href="#" class="vi"></a>
+            <a href="#" class="en"></a>
+          </div>
+        </div>
         <div class="header-mb">
           <a href="logo">
             <img src="/uploaded/logo/logo.png" alt="">
@@ -168,7 +197,7 @@
                   <div class="desc">
                     <div class="grid">
                         <div class="flex-container">
-                            <div class="cell-1-2">
+                            <div class="cell-1-2 tab-cell-1-1">
                               <h2>
                                 Lorem ipsum placeholder text commonly used
                               </h2>
@@ -193,7 +222,7 @@
                   <div class="desc">
                     <div class="grid">
                         <div class="flex-container">
-                            <div class="cell-1-2">
+                            <div class="cell-1-2 tab-cell-1-1">
                               <h2>
                                 Lorem ipsum placeholder text commonly used
                               </h2>
@@ -243,7 +272,7 @@
             <div class="grid">
               <div class="title-wrapper">
                     <h2>  Sự kiện sắp diễn ra  </h2>    
-                  <div class="more-wrapper">
+                  <div class="more-wrapper hide-on-mobile">
                     <a href="#">Xem thêm sự kiện <i class="fas fa-chevron-circle-right"></i></a>
                 </div>              
               </div>
@@ -253,7 +282,7 @@
                     <a href="" class="img-shine">
                       <img src="/uploaded/su-kien/event1.jpg" alt="">
                     </a>
-                    <a href="" class="homeevent-item__name">
+                    <a href="" class="homeevent-item__name text-line-3">
                       Lorem ipsum placeholder text commonly used in the graphic
                       <div class="desc">
                         <i class="far fa-clock"></i> Diễn ra từ 20/04/2022
@@ -265,7 +294,7 @@
                     <a href="" class="img-shine">
                       <img src="/uploaded/su-kien/event2.jpg" alt="">
                     </a>
-                    <a href="" class="homeevent-item__name">
+                    <a href="" class="homeevent-item__name text-line-3">
                       Lorem ipsum placeholder text commonly used in the graphic
                       <div class="desc">
                         <i class="far fa-clock"></i> Diễn ra từ 20/04/2022
@@ -276,7 +305,7 @@
                     <a href="" class="img-shine">
                       <img src="/uploaded/su-kien/event3.jpg" alt="">
                     </a>
-                    <a href="" class="homeevent-item__name">
+                    <a href="" class="homeevent-item__name text-line-3">
                       Lorem ipsum placeholder text commonly used in the graphic
                     </a>
                   </div>
@@ -284,7 +313,7 @@
                     <a href="" class="img-shine">
                       <img src="/uploaded/su-kien/event4.jpg" alt="">
                     </a>
-                    <a href="" class="homeevent-item__name">
+                    <a href="" class="homeevent-item__name text-line-3">
                       Lorem ipsum placeholder text commonly used in the graphic
                     </a>
                   </div>
@@ -292,7 +321,7 @@
                     <a href="" class="img-shine">
                       <img src="/uploaded/su-kien/event5.jpg" alt="">
                     </a>
-                    <a href="" class="homeevent-item__name">
+                    <a href="" class="homeevent-item__name text-line-3">
                       Lorem ipsum placeholder text commonly used in the graphic
                     </a>
                   </div>
@@ -390,22 +419,31 @@
                     </div>
                 </div>
             </div>
-            <div class="cell-1-1">
-                <div class="item">
-                    <img src="/uploaded/background/background1.png" alt="">
-                    <div class="desc">
-                        <h2 class="title text-line-2">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, esse iusto? Quis reprehenderit neque excepturi explicabo id minima, repudiandae unde adipisci rem voluptatibus tempore, sit ad illo, labore cupiditate ipsa.
-                        </h2>
-                        <div class="more-wrapper">
-                          <a href="#">Đăng Ký ngay <i class="fas fa-chevron-circle-right"></i> </a>
-                        </div>
-                       
-                    </div>
-                </div>
-            </div>
-            </div>
             
+            </div>
+          </div>
+          <div class="grid">
+              <div class="flex-container">
+                <div class="cell-1-1">
+                  <div class="item">
+                    <div class="hide-on-mobile">
+                      <img src="/uploaded/background/background1.png" alt="">
+                    </div>
+                    <div class="hide-on-pc">
+                      <img src="/uploaded/background/bgmobile.PNG" alt="">
+                    </div>
+                      <div class="desc">
+                          <h2 class="title text-line-2">
+                              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, esse iusto? Quis reprehenderit neque excepturi explicabo id minima, repudiandae unde adipisci rem voluptatibus tempore, sit ad illo, labore cupiditate ipsa.
+                          </h2>
+                          <div class="more-wrapper">
+                            <a href="#">Đăng Ký ngay <i class="fas fa-chevron-circle-right"></i> </a>
+                          </div>
+                         
+                      </div>
+                  </div>
+              </div>
+              </div>
           </div>
       </div>
       <div class="homebook-wrapper">
@@ -559,7 +597,12 @@
         <div class="flex-container">
           <div class="cell-1-1">
             <div class="item">
+              <div class="hide-on-mobile">
                 <img src="/uploaded/background/background1.png" alt="">
+              </div>
+              <div class="hide-on-pc">
+                <img src="/uploaded/background/bgmobile.PNG" alt="">
+              </div>
                 <div class="desc">
                     <h2 class="title text-line-2">
                       Lorem ipsum is placeholder text commonly used in the graphic copy 3
@@ -578,7 +621,7 @@
     
     <!-- footer -->
     <footer class="footer">
-      <div class="flex-container">       
+      <div class="flex-container  hide-on-pad hide-on-mobile">       
           <div class="footer-left">
               <img src="/uploaded/logo/logo.png" alt="">
             <div class="footer-title footer-title-mobile" rel="ct">
@@ -655,19 +698,71 @@
                     </button>
                   </form>
   
-                
-  
-  
                 </div>
               </div>
             </div>
           </div> 
       </div>
-      <div class="footer-main">
-        
+      <div class="footer hide-on-pc">
+        <div class="flex-container">
+          <div class="footer-logo-mb">
+            <img src="/uploaded/logo/logo.png" alt="">
+          </div>
+          <div class="footer-mb">
+            <div class="flex-container">
+              <div class="cell-2-4 tab-cell-1-1">
+                <div class="footer-title footer-title-mobile" rel="ct">
+                  Trung tâm Dự báo và Phát triển nguồn nhân lực 
+                </div>
+                <div class="footer-infor">
+                    <p>ĐC: Nhà G8, 144 đường Xuân Thủy, Quận Cầu Giấy, Hà Nội, Việt Nam</p>
+    
+                    <p>Giấy phép số 993/GP-TTĐT ngày 20/3/2020 của Sở Thông tin và Truyền thông Hà Nội</p>
+                  </div>
+                </div>
+              <div class="cell-1-4 tab-cell-1-1">
+                  <div class="footer-block">
+                    <div class="footer-title footer-title-mobile" rel="ct">
+                        Liên hệ
+                    </div>
+                    <div class="footer-infor">
+                    
+                      <a href="tel:024 66.841.732">Hotline: 024 66.841.732</a> <br>
+                      <a href="mailto:info.hdc.vnu@gmail.com">Email: info.hdc.vnu@gmail.com   </a> <br>
+                      <a href="#"> Website: hdc.vnu.edu.vn</a>
+                      
+                    </div>
+                  </div>
+                </div>
+                <div class="cell-1-4 tab-cell-1-1">
+                  <div class="footer-block">
+                    <div class="footer-title footer-title-mobile" rel="ct">
+                        Đăng ký nhận tin
+                    </div>
+                  
+                    <form action="" method="post" class="sendmail__frm">
+    
+                      <input type="text" name="newsletter" class="sendmail__input" placeholder="Email của bạn">
+    
+                      <button type="submit" name="addnewsletter" value="save" class="sendmail__btn">
+                        Đăng Ký
+                      </button>
+                    </form>
+    
+                  </div>
+                </div>
+                <div class="footer-copyright">
+                  <div class="grid">
+                    Copyright © 2022 VNU
+                  </div>
+                </div>
+            </div>
+          </div>
         </div>
+      </div>
 
     </footer>
+    
     <!-- end footer -->
     </div>
 <nav id="menu">
